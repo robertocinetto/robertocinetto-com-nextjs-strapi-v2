@@ -1,3 +1,4 @@
+import { useContext } from 'react'
 import NextImage from 'next/image'
 import Link from 'next/link'
 import Moment from 'react-moment'
@@ -13,30 +14,37 @@ import playingGuitar from '../public/roberto-cinetto-frontend-web-dev.webp'
 import { ImLinkedin2 } from 'react-icons/im'
 import { DevicePhoneMobileIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 
+import { GlobalContext } from '../pages/_app'
+
 export default function Home({ articles }) {
+  const { defaultSeo, siteName, siteLogo } = useContext(GlobalContext)
+
   return (
     <div>
       <Seo />
 
-      <header className="min-h-screen ">
-        <div className="px-10 border-t-4 border-yellow-400 px-6 grid grid-cols-1 xl:grid-cols-4 mx-auto place-content-center min-h-screen">
-          <div className="mx-auto col-span-4 xl:col-span-2 rounded-full border-4 border-yellow-400 w-[200px] overflow-hidden mb-10 xl:mb-0 xl:mr-20">
-            <NextImage
-              src={profileImg}
-              width={200}
-              height={200}
-              layout="responsive"
-              alt="Roberto Cinetto portrait"
-            />
+      <header className="">
+        <div className="px-10 border-t-4 border-yellow-400 px-6 mx-auto min-h-[60vh] md:min-h-[75vh]">
+          <div className="flex flex-col md:flex-row justify-center items-center w-full md:w-3/4 mx-auto min-h-[60vh] md:min-h-[75vh]">
+            <div className="flex-initial w-2/4 md:w-1/4 mx-auto rounded-full border-4 border-yellow-400 w-[200px] overflow-hidden mb-10 xl:mb-0">
+              <NextImage
+                src={profileImg}
+                width={200}
+                height={200}
+                layout="responsive"
+                alt="Roberto Cinetto portrait"
+              />
+            </div>
+            <div className="flex-initial w-full md:w-3/4 text-center xl:text-left mb-10 xl:mb-0 px-10">
+              <Image
+                image={siteLogo}
+                alt="Roberto Cinetto logo"
+              />
+            </div>
           </div>
-          <div className="text-center xl:text-left col-span-4 xl:col-span-2 mb-10 xl:mb-0">
-            <NextImage
-              src={logo}
-              width={400}
-              alt="Roberto Cinetto logo"
-            />
-          </div>
-          <div className="text-center col-span-4  mt-5 xl:mt-24">
+        </div>
+        <div className="min-h-[40vh] md:min-h-[25vh]">
+          <div className="text-center  mt-5 xl:mt-24">
             <p>Get in touch with me:</p>
             <div className="text-center mt-3 flex justify-center gap-8">
               <a

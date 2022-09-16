@@ -39,6 +39,7 @@ MyApp.getInitialProps = async ctx => {
       defaultSeo: {
         populate: '*',
       },
+      siteLogo: '*',
     },
   })
   // Pass the data to our page via props
