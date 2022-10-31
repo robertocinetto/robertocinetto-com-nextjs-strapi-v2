@@ -9,7 +9,7 @@ html {
   box-sizing: inherit;
 }
 
-li {
+ul.custom-list li {
   list-style-image: url("../public/check.svg");
   list-style-position: inside;
 }

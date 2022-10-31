@@ -7,12 +7,12 @@ import { fetchAPI } from '../../lib/api'
 
 import { GlobalContext } from '../_app'
 
-import Blocks from 'editorjs-blocks-react-renderer'
 import edjsParser from 'editorjs-parser'
+import Link from 'next/link'
+import Footer from '../../components/Footer'
 
 export default function Article({ article }) {
   const { siteLogo } = useContext(GlobalContext)
-  const { content } = article.attributes
 
   const config = {
     image: {
@@ -23,7 +23,6 @@ export default function Article({ article }) {
   }
   const parser = new edjsParser(config)
   const content2 = parser.parse(JSON.parse(article.attributes.content))
-  console.log(JSON.parse(article.attributes.content))
 
   const seo = {
     metaTitle: article.attributes.seo?.metaTitle,
@@ -41,23 +40,25 @@ export default function Article({ article }) {
     <div>
       <Seo seo={seo}></Seo>
       <header>
-        <nav className="fixed z-10 w-full border-b bg-white md:absolute md:bg-transparent">
+        <nav className="fixed z-20 w-full border-b bg-white md:absolute">
           <div className="container m-auto px-2 md:px-12 lg:px-7">
             <div className="flex flex-wrap items-center justify-between py-4 gap-6 md:py-4 md:gap-0">
               <div className="w-full px-6 flex justify-between lg:w-max md:px-0">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   aria-label="logo"
                   className="flex space-x-2 items-center"
                 >
-                  <Image
-                    layout="intrinsic"
-                    width="200"
-                    height="36"
-                    image={siteLogo}
-                    alt="Roberto Cinetto logo"
-                  />
-                </a>
+                  <a>
+                    <Image
+                      layout="intrinsic"
+                      width="200"
+                      height="36"
+                      image={siteLogo}
+                      alt="Roberto Cinetto logo"
+                    />
+                  </a>
+                </Link>
 
                 <button
                   aria-label="humburger"
@@ -133,11 +134,10 @@ export default function Article({ article }) {
         title={article.attributes.title}
       />
       <div
-        className="prose lg:prose-xl my-10 mx-auto"
+        className="prose lg:prose-xl my-10 mx-auto px-5 md:px-0"
         dangerouslySetInnerHTML={createMarkup()}
       ></div>
-      {/* {content2} */}
-      {/* <Blocks data={JSON.parse(content)} /> */}
+      <Footer />
     </div>
   )
 }

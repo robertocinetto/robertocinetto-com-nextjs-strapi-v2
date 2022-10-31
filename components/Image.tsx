@@ -1,7 +1,25 @@
 import { getStrapiMedia } from '../lib/media'
 import NextImage from 'next/image'
 
-const Image = ({ image, classsName, layout = 'responsive', objectFit = 'contain', width, height }) => {
+
+type Props = {
+  image: {
+    data: {
+      attributes: {
+        width: string,
+        height: string,
+        alternativeText: string,
+      }
+    }
+  },
+  classsName: string,
+  layout: string,
+  objectFit: string,
+  width: number,
+  height: number,
+}
+
+const Image = ({ image, classsName, layout = 'responsive', objectFit = 'contain', width, height } :Props) => {
   const { alternativeText } = image.data.attributes
 
   let theWidth = width ? width : image.data.attributes.width

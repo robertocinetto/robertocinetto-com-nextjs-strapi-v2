@@ -40,6 +40,7 @@ MyApp.getInitialProps = async ctx => {
         populate: '*',
       },
       siteLogo: '*',
+      siteLogoDark: '*',
     },
   })
   // Pass the data to our page via props
