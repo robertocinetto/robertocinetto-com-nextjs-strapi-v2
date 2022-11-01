@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: 'default',
-    domains: ['localhost'],
+    domains: ['localhost', 'robertocinetto-com-strapi.herokuapp.com'],
   },
 }
 
