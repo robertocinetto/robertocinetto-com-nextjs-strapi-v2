@@ -17,8 +17,8 @@ import { GlobalContext } from '../pages/_app'
 import Footer from '../components/Footer'
 
 import BackgroundSlider from 'react-background-slider'
-import bg1 from '../public/roberto-cinetto-vancouver-web-developer.jpg'
-import bg2 from '../public/roberto-cinetto-vancouver-frontend-developer.jpg'
+import bg1 from '../public/roberto-cinetto-vancouver-frontend-developer.jpg'
+import bg2 from '../public/roberto-cinetto-vancouver-web-developer.jpg'
 const Slider = BackgroundSlider['react-background-slider'].default
 
 export default function Home({ articles }) {

@@ -23,11 +23,11 @@ const Seo = ({ seo }) => {
         <>
           <title>{fullSeo.metaTitle}</title>
           <meta
-            property="og:title"
+            property='og:title'
             content={fullSeo.metaTitle}
           />
           <meta
-            name="twitter:title"
+            name='twitter:title'
             content={fullSeo.metaTitle}
           />
         </>
@@ -35,15 +35,15 @@ const Seo = ({ seo }) => {
       {fullSeo.metaDescription && (
         <>
           <meta
-            name="description"
+            name='description'
             content={fullSeo.metaDescription}
           />
           <meta
-            property="og:description"
+            property='og:description'
             content={fullSeo.metaDescription}
           />
           <meta
-            name="twitter:description"
+            name='twitter:description'
             content={fullSeo.metaDescription}
           />
         </>
@@ -51,28 +51,28 @@ const Seo = ({ seo }) => {
       {fullSeo.shareImage && (
         <>
           <meta
-            property="og:image"
+            property='og:image'
             content={fullSeo.shareImage}
           />
           <meta
-            name="twitter:image"
+            name='twitter:image'
             content={fullSeo.shareImage}
           />
           <meta
-            name="image"
+            name='image'
             content={fullSeo.shareImage}
           />
         </>
       )}
       {fullSeo.article && (
         <meta
-          property="og:type"
-          content="article"
+          property='og:type'
+          content='article'
         />
       )}
       <meta
-        name="twitter:card"
-        content="summary_large_image"
+        name='twitter:card'
+        content='summary_large_image'
       />
     </Head>
   )
