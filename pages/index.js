@@ -39,7 +39,7 @@ export default function Home({ articles }) {
       <header>
         <div className='px-10 border-t-4 border-yellow-400 mx-auto min-h-screen grid  place-items-center'>
           <div className='flex flex-col justify-center items-center w-full md:w-1/2 md:max-w-2xl mx-auto'>
-            <div className='w-full px-5 py-10 rounded-md backdrop-blur-sm bg-white bg-opacity-5'>
+            <div className='w-full px-5 py-10 rounded-md backdrop-blur-sm bg-white bg-opacity-5 border border-white/5'>
               <div className='flex-initial w-2/5 md:w-1/4 mx-auto rounded-full border-2 border-yellow-400 overflow-hidden my-16 xl:mb-0'>
                 <NextImage
                   src={profileImg}
@@ -87,6 +87,11 @@ export default function Home({ articles }) {
             </div>
           </div>
         </div>
+        <span class='scroll-icon'>
+          <span class='scroll-icon__wheel-outer'>
+            <span class='scroll-icon__wheel-inner'></span>
+          </span>
+        </span>
         <Slider
           images={[bg1.src, bg2.src]}
           duration={10}

@@ -59,3 +59,56 @@ ul.custom-list li {
 div#ReactBackgroundSlider > figure {
   @apply h-screen
 }
+
+
+@keyframes scroll_1 {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-0.6em); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(0.6em); }
+  100% { transform: translateY(0); }
+}
+
+.example--1 {
+  background: tomato;
+}
+
+.scroll-icon__wheel-outer {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: .6em;
+  height: 1em;
+  width: .4em;
+  margin-left: -.2em;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.scroll-icon__wheel-inner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.5);
+  animation: scroll_1 2.75s ease-in-out infinite;
+}
+
+@keyframes scroll_2 {
+  0%   { transform: translateY(0); opacity: 1; }
+  25%  { opacity: 1; }
+  75%  { transform: translateY(.75em); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.scroll-icon {
+  display: block;
+  position: absolute;
+  height: 3em;
+  width: 1.5em;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 1em;
+  bottom: 30px;
+  left: calc(50% - .75em)
+}
+
