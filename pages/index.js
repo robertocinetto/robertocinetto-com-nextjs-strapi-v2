@@ -144,7 +144,7 @@ export default function Home({ articles }) {
         </div> */}
       </header>
 
-      <main className='p-10 bg-stone-800 text-white'>
+      <main className='p-10 pt-32 bg-stone-800 text-white'>
         <div className='md:flex gap-x-5 max-w-5xl mx-auto'>
           <div className='md:basis-1/4 '>
             <div className='mx-auto md:mr-0 rounded-full border-4 border-yellow-400 overflow-hidden mb-10 xl:mb-0  w-[150px] xl:w-[200px]'>
@@ -204,8 +204,8 @@ export default function Home({ articles }) {
             <div>
               <p>
                 Javascript has been my main programming language for two years and I&apos;m deeply increasing my
-                knowledge of modern frameworks like
-                <strong>React</strong> and <strong>Vue</strong> and the world around these technologies.
+                knowledge of modern frameworks like <strong>React</strong> and <strong>Vue</strong> and the world around
+                these technologies.
               </p>
               <p>
                 Other than that, I&apos;m also a <strong>WordPress</strong> developer (plugin development, standard and
@@ -217,11 +217,7 @@ export default function Home({ articles }) {
                 the server level. From here I can develop a fully custom web marketing campaign aim to accomplish the
                 business objective.
               </p>
-              <p>
-                As a web developer, I love to work and learn new technologies,Agile software development mostly in team
-                (big fan of
-                <strong>Agile software development</strong>).
-              </p>
+              <p>As a web developer, I love to work and learn new technologies.</p>
             </div>
           </div>
         </div>
@@ -236,10 +232,12 @@ export default function Home({ articles }) {
             <div className='flex-1'>
               <ul className='custom-list'>
                 <li>
-                  Javascript dev with <strong>VueJs</strong> and
-                  <strong>React</strong> framework
+                  Javascript dev with <strong>React</strong> framework
                 </li>
-                <li>CSS libraries (Bootstrap 3/4, Material-UI, Foundation) and CSS organization style (SMACSS, BEM)</li>
+                <li>
+                  CSS libraries (TailwindCSS, Bootstrap, Material-UI, Foundation) and CSS organization style (SMACSS,
+                  BEM)
+                </li>
                 <li>WordPress dev for websites and e-commerce</li>
               </ul>
             </div>
@@ -274,75 +272,14 @@ export default function Home({ articles }) {
             </p>
           </div>
         </div>
-
-        <div className='md:flex gap-x-5 max-w-5xl mx-auto mt-20'>
-          <div className='md:basis-1/4 relative'>
-            <div className='mb-10 xl:mb-0 xl:w-auto text-right '>
-              <h3 className='underline-custom text-left md:text-right md:after-border'>Past Jobs</h3>
-            </div>
-          </div>
-          <div className='md:basis-3/4'>
-            <h4>Freelance</h4>
-            <span>2013/03 - Present</span>
-            <ul className='custom-list'>
-              <li>Javascript development with Vue and React</li>
-              <li>WordPress development with GIT/Capistrano deploy system</li>
-              <li>Used programming capabilities in PHP, SQL and JavaScript and other libraries as needed</li>
-              <li>Converted mockups into HTML, CSS and JavaScript</li>
-              <li>Hands-on experience using UNIX and Apache web servers</li>
-              <li>
-                Designed, implemented and monitored web pages and sites for continuous improvement Improved methods for
-                measurement, documentation and work flow management
-              </li>
-              <li>
-                Created eye catching and functional digital design concepts across various platforms to strengthen
-                company brand and identity
-              </li>
-              <li>Tested websites and performed troubleshooting prior to deployment</li>
-              <li>
-                SEO on site (structured data/schema.org) and consultant for copywriters on optimization of text Social
-                Media: from the simple act of creating a page to the full management of a brand/corporate in social
-              </li>
-              <li>
-                Google Tag Manager certified: I use this powerful gear to monitor any type of websites/apps. In
-                conjunction with Google Analytics, Google Ads and Facebook Pixel i&apos;m able to report every type of
-                events inside the website
-              </li>
-              <li>Google Search Console of monitoring site position on Google results pages</li>
-              <li>G Suite setup for professional email platform</li>
-            </ul>
-
-            <h4 className='mt-10'>Founder Co Owner at Megiston Srl</h4>
-            <span>01/2018 - 12/2019</span>
-            <h5>Albignasego (PD), Italy</h5>
-            <ul className='custom-list'>
-              <li>Frontend dev on Ruby on Rails projects</li>
-              <li>WordPress development with GIT/Capistrano deployment system</li>
-              <li>Server setup and management for websites hosting</li>
-              <li>Account manager and team manager</li>
-              <li>Web marketing campaigns planning</li>
-            </ul>
-
-            <h4 className='mt-10'>Web Marketing Manager at Megiston Associati</h4>
-            <span>12/2013 - 12/2017</span>
-            <h5>Albignasego (PD), Italy</h5>
-            <ul className='custom-list'>
-              <li>WordPress development with GIT/Capistrano deployment system</li>
-              <li>Server setup and management for websites hosting</li>
-              <li>Account manager and team manager</li>
-              <li>Web marketing campaigns planning</li>
-            </ul>
-
-            <h4 className='mt-10'>Web Manager at Reproduction (Guglie Srl)</h4>
-            <span>12/2013 - 12/2017</span>
-            <h5>Padua, Italy</h5>
-            <ul className='custom-list'>
-              <li>WordPress development with GIT/Capistrano deployment system</li>
-              <li>Server setup and management for websites hosting</li>
-              <li>Account manager and team manager</li>
-              <li>Web marketing campaigns planning</li>
-            </ul>
-          </div>
+        <div className='text-center'>
+          <Button
+            href='files/RobertoCinettoSoftwareEngineer.pdf'
+            className='mt-20'
+            blank
+          >
+            DOWNLOAD RESUME
+          </Button>
         </div>
 
         {/* PORTFOLIO SECTION */}
@@ -380,6 +317,7 @@ export default function Home({ articles }) {
                 <Button
                   href='https://todolistit.robertocinetto.com/'
                   blank
+                  noreferrer
                 >
                   GO TO THE PROJECT
                 </Button>
@@ -432,6 +370,7 @@ export default function Home({ articles }) {
                 <Button
                   href='https://fitnesstracker.robertocinetto.com/'
                   blank
+                  noreferrer
                 >
                   GO TO THE PROJECT
                 </Button>
