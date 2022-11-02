@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import NextImage from 'next/image'
 import Link from 'next/link'
 import Moment from 'react-moment'
+import FutureImage from 'next/future/image'
 
 import Image from '../components/Image'
 import Seo from '../components/seo'
@@ -9,6 +10,10 @@ import { fetchAPI } from '../lib/api'
 
 import profileImg from '../public/roberto-cinetto-picture.jpeg'
 import playingGuitar from '../public/roberto-cinetto-frontend-web-dev.webp'
+import todolistitLogo from '../public/to-do-list-it-logo.svg'
+import todolistit1 from '../public/todolistit-home-roberto-cinetto.png'
+import todolistit2 from '../public/todolistit-todos-roberto-cinetto.png'
+const SliderTodo = BackgroundSlider['react-background-slider'].default
 
 import { ImLinkedin2, ImGithub } from 'react-icons/im'
 import { DevicePhoneMobileIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
@@ -30,15 +35,10 @@ export default function Home({ articles }) {
       <Seo />
 
       <header>
-        <Slider
-          images={[bg1.src, bg2.src]}
-          duration={10}
-          transition={1}
-        />
         <div className='px-10 border-t-4 border-yellow-400 mx-auto min-h-screen grid  place-items-center'>
           <div className='flex flex-col justify-center items-center w-full md:w-1/2 md:max-w-2xl mx-auto'>
             <div className='w-full px-5 py-10 rounded-md backdrop-blur-sm bg-white bg-opacity-5'>
-              <div className='flex-initial w-1/4 mx-auto rounded-full border-2 border-yellow-400 overflow-hidden my-10 xl:mb-0'>
+              <div className='flex-initial w-2/5 md:w-1/4 mx-auto rounded-full border-2 border-yellow-400 overflow-hidden my-16 xl:mb-0'>
                 <NextImage
                   src={profileImg}
                   width={200}
@@ -85,6 +85,11 @@ export default function Home({ articles }) {
             </div>
           </div>
         </div>
+        <Slider
+          images={[bg1.src, bg2.src]}
+          duration={10}
+          transition={1}
+        />
         {/* <div className='px-10 border-t-4 border-yellow-400 mx-auto min-h-[60vh] md:min-h-[75vh]'>
           <div className='flex flex-col md:flex-row justify-center items-center w-full md:w-3/4 mx-auto min-h-[60vh] md:min-h-[75vh]'>
             <div className='flex-initial w-2/4 md:w-1/4 mx-auto rounded-full border-4 border-yellow-400 overflow-hidden mb-10 xl:mb-0'>
@@ -338,6 +343,69 @@ export default function Home({ articles }) {
           </div>
         </div>
 
+        {/* PORTFOLIO SECTION */}
+        <section className='mt-20 pt-10'>
+          <h2 className='text-center'>Personal Projects</h2>
+
+          <div className='bg-violet-700 text-center px-10 pt-10 -mx-10'>
+            <div className='md:flex max-w-5xl mx-auto'>
+              <div className='md:w-1/2 mb-10 md:mb-0'>
+                <h3>To Do List It!</h3>
+                <FutureImage
+                  src={todolistitLogo}
+                  alt='To Do List It logo'
+                  style={{ marginInline: 'auto', marginBlock: '2rem' }}
+                />
+                <p>
+                  Project type: <strong>Personal example project</strong>
+                </p>
+                <p>
+                  A very simple web app design by me, logo and palete at first. Just a few caracteristics of the app:
+                </p>
+                <ul className='custom-list'>
+                  <li>
+                    framework: <strong>NextJS (ReactJS)</strong>
+                  </li>
+                  <li>
+                    authentication: <strong>Firebase</strong>
+                  </li>
+                  <li>
+                    database: <strong>Firestore</strong>
+                  </li>
+                  <li>
+                    hosting: <strong>Vercel</strong>
+                  </li>
+                </ul>
+                <a
+                  href='https://todolistit.robertocinetto.com/'
+                  target='_blank'
+                  class='inline-block px-6 py-2.5 mt-5
+                        bg-violet-300 text-violet-900 font-medium text-xs leading-tight uppercase rounded shadow-md 
+                        hover:bg-violet-900 hover:shadow-lg hover:text-white
+                        focus:bg-violet-900 focus:shadow-lg focus:outline-none focus:ring-0 
+                        active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out'
+                  rel='noreferrer'
+                >
+                  Go to the project
+                </a>
+              </div>
+              <div className='md:w-1/2 text-center'>
+                <div className='px-3 pt-3 bg-slate-800 max-h-[500px] max-w-[350px] overflow-hidden rounded-t-xl mx-auto'>
+                  <div
+                    className='max-h-[500px] max-w-[350px] rounded 
+                                  overflow-hidden overflow-y-scroll 
+                                  scrollbar-thin scrollbar-thumb-violet-600 scrollbar-track-violet-900'
+                  >
+                    <FutureImage
+                      src={todolistit1}
+                      alt='To Do List It home'
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* <section>
           <div className='md:flex gap-x-5 max-w-5xl mx-auto mt-20'>
             <div className='md:basis-1/4 relative'>
