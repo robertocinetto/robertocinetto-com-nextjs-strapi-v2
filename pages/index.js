@@ -13,7 +13,8 @@ import playingGuitar from '../public/roberto-cinetto-frontend-web-dev.webp'
 import todolistitLogo from '../public/to-do-list-it-logo.svg'
 import todolistit1 from '../public/todolistit-home-roberto-cinetto.png'
 import todolistit2 from '../public/todolistit-todos-roberto-cinetto.png'
-const SliderTodo = BackgroundSlider['react-background-slider'].default
+import fitnessTrackerLogo from '../public/fitness-tracker-logo.svg'
+import fitnessTracker from '../public/fitness-tracker-roberto-cinetto.png'
 
 import { ImLinkedin2, ImGithub } from 'react-icons/im'
 import { DevicePhoneMobileIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
@@ -348,6 +349,7 @@ export default function Home({ articles }) {
         <section className='mt-20 pt-10'>
           <h2 className='text-center'>Personal Projects</h2>
 
+          {/* TO DO LIST IT! */}
           <div className='bg-violet-700 text-center px-10 pt-10 -mx-10'>
             <div className='md:flex max-w-5xl mx-auto'>
               <div className='md:w-1/2 mb-10 md:mb-0'>
@@ -360,12 +362,10 @@ export default function Home({ articles }) {
                 <p>
                   Project type: <strong>Personal example project</strong>
                 </p>
-                <p>
-                  A very simple web app design by me, logo and palete at first. Just a few caracteristics of the app:
-                </p>
+                <p>Tech stack:</p>
                 <ul className='custom-list'>
                   <li>
-                    framework: <strong>NextJS (ReactJS)</strong>
+                    framework: <strong>NextJS (ReactJS), Primereact, TailwindCSS</strong>
                   </li>
                   <li>
                     authentication: <strong>Firebase</strong>
@@ -377,17 +377,74 @@ export default function Home({ articles }) {
                     hosting: <strong>Vercel</strong>
                   </li>
                 </ul>
-                <Button href='https://todolistit.robertocinetto.com/'>GO TO THE PROJECT</Button>
+                <Button
+                  href='https://todolistit.robertocinetto.com/'
+                  blank
+                >
+                  GO TO THE PROJECT
+                </Button>
               </div>
               <div className='md:w-1/2 text-center'>
-                <div className='px-3 pt-3 bg-slate-800 max-h-[500px] max-w-[350px] overflow-hidden rounded-t-xl mx-auto'>
+                <div className='px-3 pt-3 bg-slate-800 max-h-[500px] max-w-[350px] overflow-hidden rounded-t-3xl mx-auto'>
                   <div
-                    className='max-h-[500px] max-w-[350px] rounded 
+                    className='max-h-[500px] max-w-[350px] rounded-t-xl 
                                   overflow-hidden overflow-y-scroll 
                                   scrollbar-thin scrollbar-thumb-violet-600 scrollbar-track-violet-900'
                   >
                     <FutureImage
                       src={todolistit1}
+                      alt='To Do List It home'
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* FITNESS TRACKER */}
+          <div className='bg-white text-center text-gray-800 px-10 pt-10 -mx-10'>
+            <div className='md:flex max-w-5xl mx-auto'>
+              <div className='md:w-1/2 mb-10 md:mb-0'>
+                <h3>Fitness Tracker</h3>
+                <FutureImage
+                  src={fitnessTrackerLogo}
+                  alt='To Do List It logo'
+                  style={{ marginInline: 'auto', marginBlock: '2rem' }}
+                />
+                <p>
+                  Project type: <strong>Personal example project</strong>
+                </p>
+                <p>Tech stack:</p>
+                <ul className='custom-list'>
+                  <li>
+                    framework: <strong>NextJS (ReactJS), Primereact, TailwindCSS</strong>
+                  </li>
+                  <li>
+                    authentication: <strong>Firebase</strong>
+                  </li>
+                  <li>
+                    database: <strong>Firestore</strong>
+                  </li>
+                  <li>
+                    hosting: <strong>Vercel</strong>
+                  </li>
+                </ul>
+                <Button
+                  href='https://fitnesstracker.robertocinetto.com/'
+                  blank
+                >
+                  GO TO THE PROJECT
+                </Button>
+              </div>
+              <div className='md:w-1/2 text-center'>
+                <div className='px-3 pt-3 bg-slate-800 max-h-[500px] max-w-[350px] overflow-hidden rounded-t-3xl mx-auto'>
+                  <div
+                    className='max-h-[500px] max-w-[350px] rounded-t-xl 
+                                  overflow-hidden overflow-y-scroll 
+                                  scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-900'
+                  >
+                    <FutureImage
+                      src={fitnessTracker}
                       alt='To Do List It home'
                     />
                   </div>
