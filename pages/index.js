@@ -24,6 +24,7 @@ import Footer from '../components/Footer'
 import BackgroundSlider from 'react-background-slider'
 import bg1 from '../public/roberto-cinetto-vancouver-frontend-developer.jpg'
 import bg2 from '../public/roberto-cinetto-vancouver-web-developer.jpg'
+import Button from '../components/atoms/Button'
 const Slider = BackgroundSlider['react-background-slider'].default
 
 export default function Home({ articles }) {
@@ -376,18 +377,7 @@ export default function Home({ articles }) {
                     hosting: <strong>Vercel</strong>
                   </li>
                 </ul>
-                <a
-                  href='https://todolistit.robertocinetto.com/'
-                  target='_blank'
-                  class='inline-block px-6 py-2.5 mt-5
-                        bg-violet-300 text-violet-900 font-medium text-xs leading-tight uppercase rounded shadow-md 
-                        hover:bg-violet-900 hover:shadow-lg hover:text-white
-                        focus:bg-violet-900 focus:shadow-lg focus:outline-none focus:ring-0 
-                        active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out'
-                  rel='noreferrer'
-                >
-                  Go to the project
-                </a>
+                <Button href='https://todolistit.robertocinetto.com/'>GO TO THE PROJECT</Button>
               </div>
               <div className='md:w-1/2 text-center'>
                 <div className='px-3 pt-3 bg-slate-800 max-h-[500px] max-w-[350px] overflow-hidden rounded-t-xl mx-auto'>
