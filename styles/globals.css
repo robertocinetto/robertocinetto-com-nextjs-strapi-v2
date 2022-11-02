@@ -5,9 +5,6 @@
 html {
   box-sizing: border-box;
 }
-html, body {
-  height:100%;
-}
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -57,4 +54,8 @@ ul.custom-list li {
       right: 0;
       top: 0;
   }
+}
+
+div#ReactBackgroundSlider > figure {
+  @apply h-screen
 }
