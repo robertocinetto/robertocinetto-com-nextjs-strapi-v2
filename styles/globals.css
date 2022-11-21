@@ -35,6 +35,9 @@ ul.custom-list li {
     @apply mb-4;
     font-weight: 400;
   }
+  a:hover {
+    @apply text-yellow-400 transition duration-500;
+  }
 }
 
 @layer utilities {
@@ -108,7 +111,7 @@ div#ReactBackgroundSlider > figure {
   width: 1.5em;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 1em;
-  bottom: 30px;
+  bottom: 60px;
   left: calc(50% - .75em)
 }
 

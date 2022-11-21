@@ -72,11 +72,12 @@ export default function Home({ articles }) {
             </div>
           </div>
         </div>
-        <span class='scroll-icon'>
-          <span class='scroll-icon__wheel-outer'>
-            <span class='scroll-icon__wheel-inner'></span>
+        <span className='scroll-icon'>
+          <span className='scroll-icon__wheel-outer'>
+            <span className='scroll-icon__wheel-inner'></span>
           </span>
         </span>
+
         <Slider images={[bg1.src, bg2.src]} duration={10} transition={1} />
         {/* <div className='px-10 border-t-4 border-yellow-400 mx-auto min-h-[60vh] md:min-h-[75vh]'>
           <div className='flex flex-col md:flex-row justify-center items-center w-full md:w-3/4 mx-auto min-h-[60vh] md:min-h-[75vh]'>
@@ -128,10 +129,23 @@ export default function Home({ articles }) {
             </div>
           </div>
         </div> */}
+        <nav className='navigation w-full absolute bottom-4 text-white flex justify-center gap-10'>
+          <span>
+            <a href='#profile'>PROFILE</a>
+          </span>
+          <span>
+            <a href='files/Roberto-Cinetto-Web-Developer-Resume.pdf' target='_blank' rel='noreferrer'>
+              RESUME
+            </a>
+          </span>
+          <span>
+            <a href='#projects'>PROJECTS</a>
+          </span>
+        </nav>
       </header>
 
-      <main className='p-10 pt-32 bg-stone-800 text-white'>
-        <div className='md:flex gap-x-5 max-w-5xl mx-auto'>
+      <main id='profile' className='px-10 pb-10 bg-stone-800 text-white '>
+        <div className='pt-32 md:flex gap-x-5 max-w-5xl mx-auto'>
           <div className='md:basis-1/4 '>
             <div className='mx-auto md:mr-0 rounded-full border-4 border-yellow-400 overflow-hidden mb-10 xl:mb-0  w-[150px] xl:w-[200px]'>
               <NextImage
@@ -261,7 +275,7 @@ export default function Home({ articles }) {
         </div>
 
         {/* PORTFOLIO SECTION */}
-        <section className='mt-20 pt-10'>
+        <section id='projects' className='mt-20 pt-10'>
           <h2 className='text-center'>Personal Projects</h2>
 
           {/* TO DO LIST IT! */}
