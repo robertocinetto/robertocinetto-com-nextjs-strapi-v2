@@ -50,21 +50,36 @@ export default function Home({ articles }) {
                 />
               </div>
               <div className='flex-initial w-full mx-auto md:w-3/4 text-center xl:text-left my-10 xl:mb-0 px-10'>
-                <Image image={siteLogoDark} alt='Roberto Cinetto logo' />
+                <Image
+                  image={siteLogoDark}
+                  alt='Roberto Cinetto logo'
+                />
               </div>
               <div className='text-center text-white mt-5 mb-10'>
                 <p>Get in touch with me</p>
                 <div className='text-center mt-3 flex justify-center gap-8'>
-                  <a href='https://github.com/robertocinetto' target='_blank' rel='noreferrer'>
+                  <a
+                    href='https://github.com/robertocinetto'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     <ImGithub className='w-[25px] h-[25px]' />
                   </a>
-                  <a href='https://www.linkedin.com/in/robertocinetto/' target='_blank' rel='noreferrer'>
+                  <a
+                    href='https://www.linkedin.com/in/robertocinetto/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     <ImLinkedin2 className='w-[25px] h-[25px]' />
                   </a>
                   <a href='tel:+12368869279'>
                     <DevicePhoneMobileIcon className='w-[25px] h-[25px]' />
                   </a>
-                  <a href='mailto:roberto.cinetto@gmail.com' target='_blank' rel='noreferrer'>
+                  <a
+                    href='mailto:roberto.cinetto@gmail.com'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     <EnvelopeIcon className='w-[25px] h-[25px]' />
                   </a>
                 </div>
@@ -78,7 +93,11 @@ export default function Home({ articles }) {
           </span>
         </span>
 
-        <Slider images={[bg1.src, bg2.src]} duration={10} transition={1} />
+        <Slider
+          images={[bg1.src, bg2.src]}
+          duration={10}
+          transition={1}
+        />
         {/* <div className='px-10 border-t-4 border-yellow-400 mx-auto min-h-[60vh] md:min-h-[75vh]'>
           <div className='flex flex-col md:flex-row justify-center items-center w-full md:w-3/4 mx-auto min-h-[60vh] md:min-h-[75vh]'>
             <div className='flex-initial w-2/4 md:w-1/4 mx-auto rounded-full border-4 border-yellow-400 overflow-hidden mb-10 xl:mb-0'>
@@ -134,7 +153,11 @@ export default function Home({ articles }) {
             <a href='#profile'>PROFILE</a>
           </span>
           <span>
-            <a href='files/Roberto-Cinetto-Web-Developer-Resume.pdf' target='_blank' rel='noreferrer'>
+            <a
+              href='files/Roberto-Cinetto-Web-Developer-Resume.pdf'
+              target='_blank'
+              rel='noreferrer'
+            >
               RESUME
             </a>
           </span>
@@ -144,7 +167,10 @@ export default function Home({ articles }) {
         </nav>
       </header>
 
-      <main id='profile' className='px-10 pb-10 bg-stone-800 text-white '>
+      <main
+        id='profile'
+        className='px-10 pb-10 bg-stone-800 text-white '
+      >
         <div className='pt-32 md:flex gap-x-5 max-w-5xl mx-auto'>
           <div className='md:basis-1/4 '>
             <div className='mx-auto md:mr-0 rounded-full border-4 border-yellow-400 overflow-hidden mb-10 xl:mb-0  w-[150px] xl:w-[200px]'>
@@ -171,7 +197,11 @@ export default function Home({ articles }) {
               <p>
                 Music: I love it. While I&apos;m working, I always listen to music, and as a guitarist, I love to play
                 it. Before I moved here to Vancouver, I used to play in clubs with my brother Nicola (
-                <a href='https://www.facebook.com/thecinas' target='_blank' rel='noreferrer'>
+                <a
+                  href='https://www.facebook.com/thecinas'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   The Cinas
                 </a>
                 ).
@@ -269,13 +299,20 @@ export default function Home({ articles }) {
           </div>
         </div>
         <div className='text-center'>
-          <Button href='files/Roberto-Cinetto-Web-Developer-Resume.pdf' className='mt-20' blank>
+          <Button
+            href='files/Roberto-Cinetto-Web-Developer-Resume.pdf'
+            className='mt-20'
+            blank
+          >
             DOWNLOAD RESUME
           </Button>
         </div>
 
         {/* PORTFOLIO SECTION */}
-        <section id='projects' className='mt-20 pt-10'>
+        <section
+          id='projects'
+          className='mt-20 pt-10'
+        >
           <h2 className='text-center'>Personal Projects</h2>
 
           {/* TO DO LIST IT! */}
@@ -306,7 +343,11 @@ export default function Home({ articles }) {
                     hosting: <strong>Vercel</strong>
                   </li>
                 </ul>
-                <Button href='https://todolistit.robertocinetto.com/' blank noreferrer>
+                <Button
+                  href='https://todolistit.robertocinetto.com/'
+                  blank
+                  noreferrer
+                >
                   GO TO THE PROJECT
                 </Button>
               </div>
@@ -317,7 +358,10 @@ export default function Home({ articles }) {
                                   overflow-hidden overflow-y-scroll 
                                   scrollbar-thin scrollbar-thumb-violet-600 scrollbar-track-violet-900'
                   >
-                    <FutureImage src={todolistit1} alt='To Do List It home' />
+                    <FutureImage
+                      src={todolistit1}
+                      alt='To Do List It home'
+                    />
                   </div>
                 </div>
               </div>
@@ -352,7 +396,11 @@ export default function Home({ articles }) {
                     hosting: <strong>Vercel</strong>
                   </li>
                 </ul>
-                <Button href='https://fitnesstracker.robertocinetto.com/' blank noreferrer>
+                <Button
+                  href='https://fitnesstracker.robertocinetto.com/'
+                  blank
+                  noreferrer
+                >
                   GO TO THE PROJECT
                 </Button>
               </div>
@@ -363,7 +411,10 @@ export default function Home({ articles }) {
                                   overflow-hidden overflow-y-scroll 
                                   scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-900'
                   >
-                    <FutureImage src={fitnessTracker} alt='To Do List It home' />
+                    <FutureImage
+                      src={fitnessTracker}
+                      alt='To Do List It home'
+                    />
                   </div>
                 </div>
               </div>
